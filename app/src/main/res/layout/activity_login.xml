@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="65dp"
+    >
+
+    <EditText
+        android:id="@+id/textViewUser"
+        android:hint="@string/hintUser"
+        android:textSize="@dimen/sizeTextView"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:id="@+id/textViewKey"
+        android:hint="@string/hintKey"
+        android:textSize="@dimen/sizeTextView"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUser"
+        android:layout_centerHorizontal="true"
+        android:inputType="textVisiblePassword"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:text="@string/textButtonLogin"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="doLoginApp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/textViewKey"/>
+
+    <Button
+        android:id="@+id/buttonCreateAccount"
+        android:text="@string/textButtonCreateAccount"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doLoginApp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/buttonLogin"/>
+    <ImageButton
+        android:id="@+id/buttonLoginFacebook"
+        android:src="@drawable/ic_action_facebook"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doLoginFacebook"
+        android:layout_marginRight="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/buttonLogin"/>
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/buttonLoginGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/buttonLogin"/>
+
+</RelativeLayout>
